@@ -14,11 +14,11 @@ class Cars
   attr_reader :car_name, :car_color, :car_price, :car_for_sale
   attr_writer :car_name, :car_color, :car_price, :car_for_sale
 
-def initialize(input_car_name, input_car_color, input_car_price, input_for_sale)
-  @car_name = input_car_name
-  @car_color = input_car_color
-  @car_price = input_car_price
-  @car_for_sale = input_for_sale
+def initialize(car_info)
+  @car_name = car_info[:car_name]
+  @car_color = car_info[:car_color]
+  @car_price = car_info[:car_price]
+  @car_for_sale = car_info[:for_sale]
 end
 
 def car_sales_pitch
@@ -39,9 +39,9 @@ end
 
 end
 
-car1 = Cars.new("Tank", "Army Green", 90000, true)
-car2 = Cars.new("Weinermobile", "Brown", 450, false)
-car3 = Cars.new("Batmobile", "Black", 500000, true)
+car1 = Cars.new({car_name: "Tank", car_color: "Army Green", car_price: 90000, for_sale: true})
+car2 = Cars.new({car_name: "Weinermobile", car_color: "Brown", car_price: 450, for_sale: false})
+car3 = Cars.new car_name: "Batmobile", car_color: "Black", car_price: 500000, for_sale: true
 
 
 puts car1.car_name
