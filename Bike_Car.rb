@@ -20,6 +20,12 @@ end
 
 
 class Car < Vehicle
+  def initialize
+    super
+    @fuel = 'full'
+    @make = 'Honda'
+    @model = 'Civic'
+  end
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -27,6 +33,12 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
+  def initialize 
+    super
+    @gears = 6
+    @type = 'Mountain Bike'
+    @weight = '7lbs.'
+  end
 
   def ring_bell
     puts "Ring ring!"
@@ -41,3 +53,5 @@ puts bike.accelerate
 
 puts car.honk_horn
 puts bike.ring_bell
+
+p bike

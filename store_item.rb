@@ -58,3 +58,23 @@ puts car1.car_for_sale
 puts car2.car_name
 puts car3.car_name
 
+class Used_cars < Cars
+
+  def initialize(car_info)
+    super
+    @shelf_life = car_info[:shelf_life]
+  end
+
+  def used_car_now 
+    if @shelf_life > 1
+      p "This car is now used!"
+    else
+      p "This car is New!"
+    end
+  end
+
+end
+
+used1 = Used_cars.new car_name: "Batmobile", car_color: "Black", car_price: 500000, for_sale: true, shelf_life: 6
+
+used1.used_car_now
