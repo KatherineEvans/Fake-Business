@@ -1,6 +1,5 @@
 require './store_item_Car.rb'
 require './store_item_Used_car.rb'
-require './store_item_module.rb' 
 
 
 car1 = Cars.new({car_name: "Tank", car_color: "Army Green", car_price: 90000, for_sale: true})
